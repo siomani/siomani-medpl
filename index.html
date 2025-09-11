@@ -2,48 +2,144 @@
   <head>
     <title>MEDPL 150 Section 1 - Siomani Drummond</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
+      /* Keeps background in 16:9 ratio */
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Title */
       h1 {
+        position: absolute;
+        top: 5%; /* near top under bow */
+        left: 50%;
+        transform: translateX(-50%);
         color: #FFC5D3;
-        text-align: center;  
-        margin-top: 150px;   
+        text-align: center;
+        margin: 0;
+        font-size: 3vw;
+      }
+
+      /* About me section */
+      .about {
+        position: absolute;
+        top: 52%;   /* inside pink box */
+        left: 12%;
+        width: 22%;
+        font-family: Arial, sans-serif;
+        font-size: 1.1vw;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Homework box (iPod screen) */
+      .homeworks {
+        position: absolute;
+        top: 33%;
+        left: 63%;
+        width: 21%;
+        height: 40%;
+        font-family: Arial, sans-serif;
+        font-size: 1.05vw;
+        color: #333;
+        text-align: left;  /* align text to left for neatness */
+
+        overflow-y: auto; /* scrollable */
+        overflow-x: hidden;
+
+        padding: 0.5em; /* small padding inside */
+        box-sizing: border-box;
+      }
+
+      /* scrollbar styling */
+      .homeworks::-webkit-scrollbar {
+        width: 6px;
+      }
+      .homeworks::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .homeworks::-webkit-scrollbar-thumb {
+        background: #d67ca2;
+        border-radius: 4px;
+      }
+
+      /* links */
+      a {
+        color: #d67ca2;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; /* ensures items start at very top */
+      }
+
+      ul ul {
+        margin-left: 1em;
+        font-size: 0.95em;
       }
     </style>
   </head>
 
   <body>
-    <h1>Siomani's Collection𝜗𝜚⋆₊˚</h1>
-  
-  <img src="bgimage11.jpg" 
-       style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;">
+    <div class="container">
+      <!-- Background image -->
+      <img src="Homework2bg.jpg" class="bg">
 
-<br><br>
-     <h1></h1><a href="Reflections.html">Reflections</a></h1>
-<h2>Homeworks:</h2>
+      <!-- Title -->
+      <h1>Siomani's Collection𝜗𝜚⋆₊˚</h1>
 
-<ul>
+      <!-- About me -->
+      <div class="about">
+        <p><a href="Reflections.html">Reflections</a></p>
+        <p><a href="about.html">About Me</a></p>
+      </div>
 
-<li>Homework #1</li>
-
-    <li>
-
-        Homework #2
-
+      <!-- Homework section -->
+      <div class="homeworks">
         <ul>
-
-          <li><a href="homework2-image1.html">Homework 2 Image 1</a></li>
-
-          <li><a href="homework2-image2.html">Homework 2 Image 2</a></li>
-
+          <li><a href="homework1.html">Homework #1</a></li>
+          <li>
+            Homework #2
+            <ul>
+              <li><a href="homework2-image1.html">Homework 2 Image 1</a></li>
+              <li><a href="homework2-image2.html">Homework 2 Image 2</a></li>
+            </ul>
+          </li>
+          <li><a href="homework3.html">Homework #3</a></li>
+          <li><a href="#">Homework #4 (extra)</a></li>
+          <li><a href="#">Homework #5 (extra)</a></li>
+          <li><a href="#">Homework #6 (extra)</a></li>
+          <li><a href="#">Homework #7 (extra)</a></li>
+          <li><a href="#">Homework #8 (extra)</a></li>
+          <li><a href="#">Homework #9 (extra)</a></li>
+          <li><a href="#">Homework #10 (extra)</a></li>
         </ul>
-
-      </li>
-<li>Homework #3</li>
-
-</ul>
-
-<br>
-
-<p>My name is Siomani Drummond and I am a media artist based in New York City. As of right now, I am still trying to build my foundation as well as explore the many possibilities that media production has to offer so I haven't discovered a single purpose or direction within the work that I want to create. I am looking forward to expanding and discovering that direction and a purpose that feels the most authentic to who I am and what I want to create and contribute to the world of media. I hope the course will guide me towards that direction helping me explore and find my purpose as an artist while challenging me to grow both in skill and in vision.</p>
-
- </body>
+      </div>
+    </div>
+  </body>
 </html>
+
