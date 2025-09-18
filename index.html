@@ -1,50 +1,177 @@
-<html>
-  <head>
-    <title>MEDPL 150 Section 1 - Siomani Drummond</title>
-    <style>
-      h1 {
-        color: #FFC5D3;
-        text-align: center;  
-        margin-top: 150px;   
-      }
-    </style>
-  </head>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MEDPL 150 Section 1 - Siomani Drummond</title>
 
-  <body>
-    <h1>Siomani's Collection𝜗𝜚⋆₊˚</h1>
+<style>
+  :root {
+    --accent: #eeeef0;
+    --title: #FFC5D3;
+    --text: #F8C8DC;
+  }
 
-  <img src="Homework2bg." 
-  <img src="bgimage11.jpg" 
-       style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;">
+  /* page centering */
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: "Arial", sans-serif;
+    color: var(--text);
+  }
 
-<br><br>
-     <h1></h1><a href="Reflections.html">Reflections</a></h1>
-<h2>Homeworks:</h2>
+  /* container keeps 16:9 aspect (1920x1080) */
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    aspect-ratio: 16 / 9; /* keeps correct proportions */
+    overflow: hidden;
+  }
 
-<ul>
+  /* background image sits behind everything */
+  .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+  }
 
-<li>Homework #1</li>
+  /* Title: centered near the top (under the bow) */
+  h1.title {
+    position: absolute;
+    top: 24%;               
+    left: 33%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    color: var(--title);
+    font-size: clamp(26px, 3.0vw, 56px);
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
 
-    <li>
+  /* About box */
+  .about {
+    position: absolute;
+    top: 55%;               
+    left: 2%;
+    width: 65%;
+    transform: translateY(-23%);
+    z-index: 2;
+    text-align: center;
+    box-sizing: border-box;
+  }
 
-        Homework #2
+  .about a {
+    display: block;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: clamp(14px, 1.1vw, 18px);
+    margin: 6px 0;
+  }
+  .about a:hover { text-decoration: underline; }
 
-        <ul>
+  /* Homework box */
+  .homeworks {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 31%;
+    height: 21%;
+    z-index: 2;
+    box-sizing: border-box;
 
-          <li><a href="homework2-image1.html">Homework 2 Image 1</a></li>
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.6rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(255,255,255,0);
+  }
 
-          <li><a href="homework2-image2.html">Homework 2 Image 2</a></li>
+  .homeworks::-webkit-scrollbar { width: 5px; }
+  .homeworks::-webkit-scrollbar-track { background: transparent; }
+  .homeworks::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 
-        </ul>
+  .homeworks ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-      </li>
-<li>Homework #3</li>
+  .homeworks li {
+    margin: 0.4rem 0;
+    font-size: clamp(13px, 1.0vw, 16px);
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+  }
 
-</ul>
+  /* keep other hover styles */
+  .homeworks li a:hover { background: rgba(214,124,162,0.08); }
 
-<br>
+  .homeworks li ul { margin-top: 0.25rem; padding-left: 0.6rem; }
+  .homeworks li ul li { font-weight: 500; font-size: 0.95em; color: var(--text); }
 
-<p>My name is Siomani Drummond and I am a media artist based in New York City. As of right now, I am still trying to build my foundation as well as explore the many possibilities that media production has to offer so I haven't discovered a single purpose or direction within the work that I want to create. I am looking forward to expanding and discovering that direction and a purpose that feels the most authentic to who I am and what I want to create and contribute to the world of media. I hope the course will guide me towards that direction helping me explore and find my purpose as an artist while challenging me to grow both in skill and in vision.</p>
+  @media (max-width: 700px) {
+    .about { left: 6%; width: 30%; }
+    .homeworks { left: 55%; width: 35%; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
 
- </body>
+    <!-- background image -->
+    <img src="https://uploads.onecompiler.io/43wcrxkcw/43wcrwmqm/Homework%20(3).jpg" class="bg" alt="background">
+
+    <!-- Title -->
+    <h1 class="title">˚₊⋆𝜗𝜚Siomani's Collection𝜗𝜚⋆₊˚</h1>
+
+    <!-- About links -->
+    <div class="about" aria-label="About links">
+     <a href="about.html">Sio's Story</a>
+     <a href="Reflections.html">Reflections</a>
+    </div>
+
+    <!-- Homework list -->
+    <nav class="homeworks" aria-label="Homework links">
+      <ul>
+        <li><a href="homework1.html" style="color:#EED2DC;">Homework #1</a></li>
+        <li>
+          <a href="homework2.html" style="color:#F8C8DC;">Homework #2</a>
+          <ul>
+            <li><a href="homework2-image1.html" style="color:#F8C8DC;">Homework 2 Image 1</a></li>
+            <li><a href="homework2-image2.html" style="color:#F8C8DC;">Homework 2 Image 2</a></li>
+          </ul>
+        </li>
+        <li><a href="homework3.html" style="color:#F8C8DC;">Homework #3</a></li>
+
+        <li><a href="#" style="color:#F8C8DC;">Homework #4</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #5</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #6</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #7</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #8</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #9</a></li>
+        <li><a href="#" style="color:#F8C8DC;">Homework #10</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</body>
 </html>
