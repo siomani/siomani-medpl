@@ -11,10 +11,17 @@
       font-family: Arial, sans-serif;
       color: white;
       position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-start; /* aligns content to left half */
+      align-items: center; /* vertically centers content */
     }
 
-    h1, h2 {
-      text-align: center;
+    /* left half container */
+    .left-half {
+      width: 50%; /* left half of page */
+      text-align: center; /* centers text within left half */
+      padding: 0 20px; /* optional horizontal padding */
     }
 
     h2 {
@@ -22,9 +29,8 @@
     }
 
     p {
-      max-width: 600px;
-      margin: 0 auto 30px auto;
       line-height: 1.6;
+      margin-bottom: 30px;
     }
 
     /* background image */
