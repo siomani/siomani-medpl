@@ -39,6 +39,15 @@
       <a href="index.html">Back to Home</a><br>
   
     </div>
+    <script>
+    // Automatically set background based on HTML page name
+    const pageName = window.location.pathname.split("/").pop().split(".")[0];
+    document.body.style.backgroundImage = `url(reflections${pageName}.jpg')`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundPosition = 'center top';
+  </script>
   </body>
 </html>
 
