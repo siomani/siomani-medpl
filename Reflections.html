@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siomani Reading Reflection</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siomani Reading Reflection</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #483b39; /* text color for this page */
-      display: flex;
-      justify-content: flex-start; /* align left half */
-      align-items: flex-start; /* start from top */
-      position: relative;
-      /* remove height:100vh so page scrolls naturally */
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #483b39; /* improved readability */
+    display: flex;
+    justify-content: flex-start; /* left-half */
+    align-items: flex-start;
+    position: relative;
+  }
 
-    /* left half container */
-    .left-half {
-      width: 50%;
-      padding: 120px 40px 40px; /* push content down */
-      text-align: center; /* horizontally centered in left half */
-      box-sizing: border-box;
-    }
+  /* left-half container wrapper with clip */
+  .left-half-wrapper {
+    width: 50%;
+    height: 100vh; /* only visible height */
+    overflow: hidden; /* hides content above/below */
+    position: relative;
+  }
 
-    h2 {
-      margin-bottom: 20px;
-    }
+  /* actual content scrolls normally inside wrapper */
+  .left-half {
+    padding: 120px 40px 40px;
+    text-align: center; /* centered in left half */
+  }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+  h2 {
+    margin-bottom: 20px;
+  }
 
-    /* background image */
-    .bg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: fill; /* stretch to fill viewport */
-      z-index: -1;
-    }
+  p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
 
-    .links {
-      text-align: center;
-      margin: 40px 0;
-    }
+  /* background image */
+  .bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* stretch background */
+    z-index: -1;
+  }
 
-    .links a {
-      color: #483b39; /* match text color */
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  </style>
+  .links {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .links a {
+    color: #483b39;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+</style>
 </head>
 
 <body>
 
-  <!-- background image -->
-  <img src="reflections.png" class="bg" alt="background">
+<!-- background image -->
+<img src="reflections.png" class="bg" alt="background">
 
-  <!-- left half content -->
+<!-- left-half wrapper to hide content above top -->
+<div class="left-half-wrapper">
   <div class="left-half">
 
   <h2>Susan Sontag’s “Plato’s Cave”</h2>
