@@ -29,18 +29,24 @@
   }
 
   /* Text container positioned between 630px and 740px */
-  .text-container {
-    position: absolute;
-    top: 630px;       /* start at 630px from top */
-    height: 110px;    /* 740 - 630 = 110px */
-    width: 100%;
-    display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center inside container */
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0 40px;
-  }
+.text-container {
+  position: absolute;
+  top: 250px;       /* move much higher on the page */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.text-container p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1.3rem; /* slightly larger text */
+}
+
 
   p {
     margin: 0;
