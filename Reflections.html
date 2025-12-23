@@ -13,21 +13,16 @@
       height: 100vh;
       display: flex;
       justify-content: flex-start; /* left side */
-      align-items: center; /* vertical center */
-      overflow: hidden; /* hide body scroll */
+      align-items: flex-start; /* stop vertical centering */
+      overflow: hidden; /* no scrolling */
       position: relative;
     }
 
     /* left half container */
     .left-half {
       width: 50%;
-      height: 100%;
-      padding: 20px;
-      overflow-y: auto; /* allow scrolling inside left half */
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* vertical centering */
-      text-align: center; /* horizontal center in left half */
+      padding: 120px 40px 40px; /* pushes text DOWN */
+      text-align: center; /* centered within left half */
       box-sizing: border-box;
     }
 
@@ -46,7 +41,7 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain; /* option 1: whole image visible */
+      object-fit: fill; /* stretch to fill screen */
       z-index: -1;
     }
 
