@@ -9,25 +9,17 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #483b39; /* improved readability */
-    display: flex;
-    justify-content: flex-start; /* left-half */
-    align-items: flex-start;
+    color: #483b39; /* text color */
     position: relative;
   }
 
-  /* left-half container wrapper with clip */
-  .left-half-wrapper {
-    width: 50%;
-    height: 100vh; /* only visible height */
-    overflow: hidden; /* hides content above/below */
-    position: relative;
-  }
-
-  /* actual content scrolls normally inside wrapper */
+  /* left-half container */
   .left-half {
+    width: 50%;
     padding: 120px 40px 40px;
     text-align: center; /* centered in left half */
+    box-sizing: border-box;
+    position: relative;
   }
 
   h2 {
@@ -49,6 +41,14 @@
     z-index: -1;
   }
 
+  /* Clip the top of text naturally as you scroll */
+  .left-half::before {
+    content: "";
+    display: block;
+    height: 120px; /* same as top padding */
+    margin-top: -120px; /* offset so text disappears above top */
+  }
+
   .links {
     text-align: center;
     margin: 40px 0;
@@ -67,9 +67,8 @@
 <!-- background image -->
 <img src="reflections.png" class="bg" alt="background">
 
-<!-- left-half wrapper to hide content above top -->
-<div class="left-half-wrapper">
-  <div class="left-half">
+<!-- left-half content -->
+<div class="left-half">
 
   <h2>Susan Sontag’s “Plato’s Cave”</h2>
 <p>
